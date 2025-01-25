@@ -1,8 +1,10 @@
 # Quadrilateral-Mesh
 Generates a structured quadrilateral mesh of arbitrary order within any rectangular domain
-[plt1.pdf](https://github.com/user-attachments/files/18544798/plt1.pdf)
+
 
 This code generates a quadrilateral mesh of arbitrary order (linear, quadratic, cubic, etc.) within a rectangular domain. The mesh parameters are defined by the rectangle’s dimensions, horizontal and vertical partition sizes, and the desired element order.
+
+![plt1](https://github.com/user-attachments/assets/3ec347cc-bbad-48d8-8172-f61dbc8c7c29)
 
 Indexing in the code commences from the bottom left and increments counterclockwise.
 ## Methods
