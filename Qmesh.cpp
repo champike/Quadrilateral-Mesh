@@ -20,12 +20,12 @@ int main(int argc, const char * argv[]) {
     double leftX {-1.0}, rightX{1.0}, bottomY{-1.0}, topY{1.0}; // rectangular domain boundary
     
     // deform rectanular element into quadrilateral element
-    // If the variable "defFlag == 0" the  deformation of rectanglar elements are done in random scale
-    // If the variable "defFlag == 1" the  deformation of rectanglar elements are done in the scale
-    // of alphaX horzonatally and alphaY vertically
-    int defFlag = 1;
+    // If the variable "defFlag == 1" the  deformation of rectangular elements are done in a random scale
+    // If the variable "defFlag == 0" the  deformation of rectangular elements are done in the scale
+    // of alphaX horizontally and alphaY vertically
+    int defFlag = 0;
     //0 < alphaX,alphaY < 1
-    double alphaX = 0.5; //deform scale alphaX/nXpart horzontally
+    double alphaX = 0.5; //deform scale alphaX/nXpart horizontally
     double alphaY = 0.3;  //deform scale alphaY/nYpart vertically
    // int boundary[4] = {0,1,1,0};
     
@@ -39,7 +39,7 @@ int main(int argc, const char * argv[]) {
     //displayMatrix(mesh.globalDOFs());
     
     /*
-     * The variable parammeter Controls the display of node indices:
+     * The variable parameter Controls the display of node indices:
      *              - 0: Display the mesh without any indices.
      *              - 1: Display indices at the corners of each element.
      *              - 2: Display indices of all nodes in the mesh.
