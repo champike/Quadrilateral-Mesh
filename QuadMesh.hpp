@@ -32,13 +32,13 @@ public:
     // Creates a 2D vector of coordinates for all degrees of freedom in the quad mesh.
     std::vector <std::vector <double>> globalDOFs();
     
-    // Creates a 2D vector containing local degree of freedom indices for each element.
+    // Creates a 2D vector containing each element's local degree of freedom indices.
     std::vector <std::vector <int>> ptrLocalDOFs();
     
     // Creates a 2D vector containing node indices of vertices for each quadrilateral element.
     std::vector <std::vector <int>> ptrEleNodes();
     
-    // Creates a vector containing element indices for each quadrilateral elemen on the edges.
+    // Creates a vector containing element indices for each quadrilateral element on the edges.
     std::vector <int> boundaryElements();
     
     // Creates a vector containing nodal indices for each quadrilateral element on the edges.
