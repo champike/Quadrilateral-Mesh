@@ -8,7 +8,7 @@
 #include "QuadMesh.hpp"
 #include "Display.hpp"
 /**
- * @brief Constructs a QuadMesh object with given partition information and order.
+ * @brief Constructs a QuadMesh object using the partition information and order given.
  *
  * This constructor initializes the QuadMesh object with the specified number of partitions in the x and y directions,
  * the domain boundaries, and the polynomial order of the basis functions.
@@ -103,8 +103,8 @@ std::vector <std::vector <double>> QuadMesh::globalDOFs(){
         }
     }
     
-    // Use deviation parameter to deform rectangular elements to trapizodals
-    // first consider the four coners
+    // Use deviation parameter to deform rectangular elements to quadrlateral
+    // first consider the four corners
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_real_distribution<> dis(0, 1);//uniform distribution between 0 and 1
@@ -140,7 +140,7 @@ std::vector <std::vector <double>> QuadMesh::globalDOFs(){
      - top edge
      to avoid repeat calculations.
      */
-    // Base on the matrix created in the ptrLocalDOFs() create a vector with the requared nodal indices.
+    //Based on the matrix created in the ptrLocalDOFs() create a vector with the required nodal indices.
     int reqLocalNd [order*order];
     count = 0;
     // zeroth element (node on the bottom left corner) included only for simplicity of the calculation
@@ -221,7 +221,7 @@ std::vector <std::vector <double>> QuadMesh::globalDOFs(){
 
 
 /**
- * @brief Creates a vector containing the x- and y-coordinates of a transformed point.
+ * @brief Creates a vector containing a transformed point's x- and y-coordinates.
  *
  * This method transforms a point from the given reference element to the specified quadrilateral.
  *
@@ -247,7 +247,7 @@ std::vector<double> QuadMesh::Translation(double xi, double eta, std::vector<std
 
 
 /**
- * @brief Creates a 2D vector containing local degree of freedom indices for each element.
+ * @brief Creates a 2D vector containing each element's local degree of freedom indices.
 
  * This method determines the indices of the local degrees of freedom for each element in the mesh.
  * The indices are arranged in a specific order, corresponding to the local node numbering within each element.
@@ -307,7 +307,7 @@ std::vector <std::vector <int>> QuadMesh::ptrEleNodes(){
 }
 
 /**
- * @brief Creates a vector containing element indices for each quadrilateral elemen on the edgest.
+ * @brief Creates a vector containing element indices for each quadrilateral element on the edges.
  *
  * This method creates a vector with indices of elements which are
  * arranged counter-clockwise, on the bottom, left, right, and top edges respectively.
@@ -345,7 +345,7 @@ std::vector<int> QuadMesh::boundaryElements() {
  * @brief Creates a vector containing nodal indices for each quadrilateral element on the edges.
  *
  * This method creates a vector with indices of nodes which are
- * arranged in the order  bottom, left, right, and top edges respectively.
+ * arranged in the order  of bottom, left, right, and top edges respectively.
  *
  * @return A vector of size 2 * (order * nPartsX + 1) + 2 * (order * nPartsY - 1)4,
  * consisting of indices of elements on the bottom, left, right, and top edges respectively
@@ -375,10 +375,10 @@ std::vector<int> QuadMesh::boundaryNodes() {
 }
 
 /**
- * @brief Create four vector containing nodal indices for each quadrilateral element on the specific  edges.
+ * @brief Create four vectors containing nodal indices for each quadrilateral element on the specific  edges.
  *
  * This method creates four  vectors with indices of nodes which are
- * arranged in the order  bottom, top, left, and right  edges respectively.
+ * arranged in the order  of bottom, top, left, and right  edges respectively.
  *
  * @return A tuple with four vectors ),
  * consisting of indices of elements on the bottom, left, right, and top edges respectively
@@ -409,7 +409,7 @@ std::tuple<std::vector<int>, std::vector<int>, std::vector<int>, std::vector<int
  * @brief Creates a 2D vector containing node indices for edges of  each quadrilateral element.
  
  * This method determines the indices of the four edges  for each quadrilateral element in the mesh.
- * The indices are arranged counter-clockwise, starting from the bottomr.
+ * The indices are arranged counter-clockwise, starting from the bottom.
  
  * @return A 2D vector of size (nPartsX * nPartsY) x 4, where each inner vector contains the indices of the four corner nodes of an element.
  */
