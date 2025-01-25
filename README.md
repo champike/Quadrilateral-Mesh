@@ -5,40 +5,25 @@ This code generates a quadrilateral mesh of arbitrary order (linear, quadratic, 
 
 Indexing in the code commences from the bottom left and increments counterclockwise.
 ## Methods
-**Calculates a matrix X and Y coordinate of each degree of freedom.**
-'''
-globalDOFs()
-'''
-**Matrix of indices of degrees of freedom of each element.**
-‘’’
-ptrLocalDOFs()
-‘’’
-**Matrix of indices of vertices of each element.**
-‘’’
-ptrEleNodes()
-‘’’
-**Indices of elements on the boundary.**
-‘’’
-boundaryElements()
-‘’’
-**Indices of all nodes on the boundary.**
-‘’’
-boundaryNodes()
-‘’’
-**Tuple containing four vectors. Each vector holds boundary nodal indices on the bottom, top, left, and right edges, respectively.**
-‘’’
-boundarySpecificNodes()
-‘’’
-**Indices of edges of each element.**
-‘’’
-ElementEdges()
+* `globalDOFs()` Calculates a matrix X and Y coordinate of each degree of freedom.**
 
+* `ptrLocalDOFs()` Matrix of indices of degrees of freedom of each element.**
+
+* `ptrEleNodes()` Matrix of indices of vertices of each element.**
+
+* `boundaryElements()` Indices of elements on the boundary.**
+
+* `boundaryNodes()` Indices of all nodes on the boundary.**
+
+* `boundarySpecificNodes()` Tuple containing four vectors. Each vector holds boundary nodal indices on the bottom, top, left, and right edges, respectively.**
+
+* `ElementEdges()` Indices of edges of each element.**
 
 
 The mesh can be displayed using 
-'''
+`
 displayMesh( . . . )
-'''
+`
 function. 
 
 ## Dependencies
