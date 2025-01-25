@@ -33,7 +33,7 @@ void displayMatrix(const std::vector <std::vector <int>> mtx){
  * This function displays the contents of a 2D vector of integers
  * in a visually readable format.
  *
- * @param mtx The 2D vector of double to be displayed.
+ * @param mtx The 2D vector of double is to be displayed.
  *
  */
 void displayMatrix(const std::vector <std::vector <double>> mtx){
@@ -112,7 +112,7 @@ void displayMesh(QuadMesh mesh, int nX, int nY, int deg, int param){
         for (int j = 0; j < 4; j++){
             meshfile << nodalCoords[eleNodes[i][j]][0] << " " << nodalCoords[eleNodes[i][j]][1] << std::endl;
         }
-        // Put coordinates of the first node to the end. So it completes the quadrlateral
+        // Put the coordinates of the first node to the end. So it completes the quadrilateral
         meshfile << nodalCoords[eleNodes[i][0]][0] << " " << nodalCoords[eleNodes[i][0]][1] << std::endl;
         // Add an empty line to separate elements
         meshfile << std::endl;
@@ -143,7 +143,7 @@ void displayMesh(QuadMesh mesh, int nX, int nY, int deg, int param){
                 count++;
             }
         }
-        // combine vector with labels
+        //Combine vector with labels
         Gnucommands.insert(Gnucommands.end(), GnuText.begin(), GnuText.end());
         Gnucommands.push_back("plot '/Users/attanac/Downloads/mesh.txt' pt 1 lt 5 lc 7 w lp");
     }
@@ -156,7 +156,7 @@ void displayMesh(QuadMesh mesh, int nX, int nY, int deg, int param){
             GnuText[i] = "set label '" + std::to_string(i) + "' at " + std::to_string(nodalCoords[i][0]) + "," + std::to_string(nodalCoords[i][1]-0.01);
             nodefile << nodalCoords[i][0]<< " " << nodalCoords[i][1]<< std::endl;
         }
-        // combine vector with labels
+        //Combine vector with labels
         Gnucommands.insert(Gnucommands.end(), GnuText.begin(), GnuText.end());
         nodefile.close();
         Gnucommands.push_back("plot '/Users/attanac/Downloads/mesh.txt' pt 1 lt 5 lc 7 w lp, '/Users/attanac/Downloads/node.txt' pt 28  lc 5 w p");
