@@ -20,8 +20,8 @@ int main(int argc, const char * argv[]) {
     double leftX {-1.0}, rightX{1.0}, bottomY{-1.0}, topY{1.0}; // rectangular domain boundary
     
     // deform rectanular element into quadrilateral element
-    // If the variable "defFlag == 1" the  deformation of rectangular elements are done in a random scale
-    // If the variable "defFlag == 0" the  deformation of rectangular elements are done in the scale
+    // If the variable "defFlag == 1" the  deformation of rectangular elements is done in a random scale
+    // If the variable "defFlag == 0" the  deformation of rectangular elements is done in the scale
     // of alphaX horizontally and alphaY vertically
     int defFlag = 0;
     //0 < alphaX,alphaY < 1
