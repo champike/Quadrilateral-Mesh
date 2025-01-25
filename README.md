@@ -6,9 +6,9 @@ This code generates a quadrilateral mesh of arbitrary order (linear, quadratic, 
 Indexing in the code commences from the bottom left and increments counterclockwise.
 ## Methods
 **Calculates a matrix X and Y coordinate of each degree of freedom.**
-‘’’
+'''
 globalDOFs()
-‘’’
+'''
 **Matrix of indices of degrees of freedom of each element.**
 ‘’’
 ptrLocalDOFs()
